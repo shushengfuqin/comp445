@@ -1,9 +1,30 @@
-{
-    "Date": "Tue, 05 Oct 2021 16:27:40 GMT",
-    "Content-Type": "application/json",
-    "Content-Length": "308",
-    "Connection": "keep-alive",
-    "Server": "gunicorn/19.9.0",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Credentials": "true"
-}
+[
+    [
+        "Date",
+        "Tue, 05 Oct 2021 22:09:17 GMT"
+    ],
+    [
+        "Content-Type",
+        "application/json"
+    ],
+    [
+        "Content-Length",
+        "261"
+    ],
+    [
+        "Connection",
+        "keep-alive"
+    ],
+    [
+        "Server",
+        "gunicorn/19.9.0"
+    ],
+    [
+        "Access-Control-Allow-Origin",
+        "*"
+    ],
+    [
+        "Access-Control-Allow-Credentials",
+        "true"
+    ]
+]

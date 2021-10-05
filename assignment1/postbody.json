@@ -1,5 +1,7 @@
 {
-    "args": {},
+    "args": {
+        "var": "1"
+    },
     "data": "",
     "files": {},
     "form": {},
@@ -8,10 +10,10 @@
         "Accept-Encoding": "gzip, deflate",
         "Content-Length": "0",
         "Host": "httpbin.org",
-        "User-Agent": "python-requests/2.25.1",
-        "X-Amzn-Trace-Id": "Root=1-615c7e6d-2643152f7e2838ee0581d827"
+        "User-Agent": "python-requests/2.22.0",
+        "X-Amzn-Trace-Id": "Root=1-615cbb45-543ed4017f101a662ea9d58d"
     },
     "json": null,
-    "origin": "173.179.244.184",
-    "url": "http://httpbin.org/post"
+    "origin": "65.92.241.31",
+    "url": "http://httpbin.org/post?var=1"
 }
