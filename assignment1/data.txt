@@ -1,0 +1,23 @@
+{
+    "Date": "Wed, 06 Oct 2021 17:42:34 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "393",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}{
+  "args": {
+    "assignment": "1", 
+    "course": "networking"
+  }, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Host": "httpbin.org", 
+    "User-Agent": "python-requests/2.25.1", 
+    "X-Amzn-Trace-Id": "Root=1-615de00a-044591842e35c6302b5db98f"
+  }, 
+  "origin": "132.205.229.163", 
+  "url": "http://httpbin.org/get?course=networking&assignment=1"
+}
