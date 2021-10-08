@@ -2,6 +2,7 @@ import sys
 from http_lib import GET,POST
 
 def main(kb):
+
     method = kb[0]
     print(method)
     url = kb[-1]
@@ -21,3 +22,4 @@ def main(kb):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+

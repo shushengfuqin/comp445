@@ -8,12 +8,12 @@ def GET(url, str):
 
     # separate the url in to scheme, netloc, path, paraams, query and fragment
 
-    link = urlparse(url)
-    HOST = link.netloc
-    PATH = link.path
-    if PATH == "":
-        PATH = "/"
-    QUERY = link.query
+    # link = urlparse(url)
+    # HOST = link.netloc
+    # PATH = link.path
+    # if PATH == "":
+    #     PATH = "/"
+    # QUERY = link.query
 
 
     receive = requests.get(url)
