@@ -19,7 +19,6 @@ def server(port, dir):
         files = os.listdir(localdir)
         conn, addr = listener.accept()
         request = conn.recv(1024).decode("utf-8")
-        #breaking up the request
         request = request.split('\r\n')
         mpv = request[0].split()
         method = mpv[0]
@@ -34,41 +33,29 @@ def server(port, dir):
         
         if method == 'GET':
             if path == '/':
-                if args.verbose:
-                    print ('Responding with list of files')
                 for f in files:
                     response += f + '\n'
             elif re.search(r'\/\w+.\w+', path):
                 path = path.strip('/')
-                if args.verbose:
-                    print ('Responding with contents of', path)
                 if path in files:
                     theFile = open(localdir +'/'+ path, 'r')
                     response = theFile.read() + '\n'
                     theFile.close()
                 else:
-                    if args.verbose:
-                        print ('Responding with HTTP 404 - file(s) not found', path)
                     response = 'HTTP 404 - file(s) not found\n'
         elif method == 'POST':
             path = path.strip('/')
             if path in files:
-                if args.verbose:
-                    print ('Responding with data overwritten to file', path)
                 theFile = open(localdir +'/'+ path, 'w+')
                 theFile.write(data)
                 theFile.close()
                 response = 'Data overwritten to file '+path
             elif path not in files:
-                if args.verbose:
-                    print ('Responding with data written to new file '+ path)
                 theFile = open(localdir +'/'+ path, 'w+')
                 theFile.write(data)
                 theFile.close()
                 response = 'Data written to new file '+ path
             else:
-                if args.verbose:
-                    print ('Responding with HTTP 403 - action refused')
                 response = "HTTP 403 - action refused \n"
 
         conn.sendall(response.encode('utf-8'))
